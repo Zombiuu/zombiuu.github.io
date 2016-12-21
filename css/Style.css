@@ -1,0 +1,417 @@
+﻿
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+    margin-top: 120px;
+}
+
+.size-center {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+section {
+    width: 100%;
+}
+
+    section p {
+        color: #2b2a2a;
+    }
+
+.container {
+    margin-top: 200px;
+    max-width: 60em;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.border-bot {
+    border-bottom: 5px solid grey;
+    border-bottom-width: 1px;
+}
+
+header {
+    background-color: #999;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 4em;
+    text-align: center;
+    height: 475px;
+}
+
+    header h1 {
+        color: white;
+        font-size: 2em;
+        margin: 0;
+        letter-spacing: 1px;
+        opacity: 1;
+        text-shadow: 0 3px 0 rgba(0,0,0, 0.5);
+        position: relative;
+        top: 370px;
+        font-weight: 700;
+    }
+
+    header p {
+        color: #fff;
+        font-size: 1.1em;
+        padding-bottom: 1.3em;
+        padding-top: .5em;
+        opacity: .9;
+        position: relative;
+        top: 360px;
+    }
+/***************************NAV-BAR********************************/
+.fixed-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 80px;
+    background-color: #e9e4e4;
+    opacity: 0.90;
+}
+
+
+    .fixed-nav-bar li, .fixed-nav-bar a {
+        height: 50px;
+        line-height: 50px;
+    }
+
+.menu {
+    width: 100%;
+    margin: 0 auto;
+}
+
+    .menu a, .menu a:visited {
+        color: black;
+    }
+
+        .menu a:hover, .menu a:target {
+            color: black;
+        }
+
+.menu-items {
+    float: right;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 16px;
+    margin-right: 20%;
+}
+
+    .menu-items li a {
+        padding: 0 10px;
+    }
+
+        .menu-items li a:hover {
+            padding-top: 25px;
+            border-top: 5px solid black;
+        }
+
+    .menu-items li {
+        display: inline-block;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .menu-items a {
+        text-decoration: none;
+    }
+
+@media only screen and (max-width: 400px) {
+    .menu {
+        position: relative;
+        width: 100%;
+    }
+
+    .sitename {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        margin-left: 0px;
+    }
+
+    .menu-items {
+        display: none;
+        width: 100%;
+        margin-top: 50px;
+        background-color: #008378;
+    }
+
+        .menu-items li {
+            display: block;
+            text-align: center;
+        }
+}
+/**************HOBBIES*****************/
+.hobbies {
+  
+    text-align: center;
+    margin-bottom: 30px;
+    display: block;
+   
+}
+
+.hobbies-title {
+ 
+    border-radius:.25em;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    text-align: center;
+    font-size: 35px;
+    background-color: #e9e4e4;
+}
+
+.hobbies img {
+    height: 4em;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 40px;
+
+}
+
+.hobbies p {
+        
+    color: #2b2a2a;
+    margin-top: -15px;
+}
+
+
+
+.row-hobbies {
+
+    float: left;
+    width: 33.3333333%;
+    display: inline-block;
+}
+
+
+/********************PARALAX********************/
+#paralax {
+    opacity: 0.8;
+    text-align: center;
+    color: #fff;
+    height: 300px;
+    position: relative;
+    /* The image used */
+    background-image: url("img/background.jpg");
+    /* Set a specific height */
+    height: 250px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paralax-title {
+    font-size: 72px;
+    padding-top: 12%;
+    font-family: Audiowide;
+}
+
+/**** PROYECTOS ****/
+.proyects {
+    width: 49%;
+    display: inline-block;
+}
+
+img proyect-1 {
+    height: 313px;
+    width: 49%;
+}
+
+.proyect-title h2 {
+    padding-top: 250px;
+    margin-left: 200px;
+    font-size: 40px;
+}
+
+.proyect-1 {
+    color:white;
+    height: 313px;
+    width: 49%;
+    display: inline-block;
+    background-color: black;
+
+}
+.proyect-1:hover{
+    background-color: #e9e4e4;
+    color:black;
+    transform: scale(1.3);
+}
+.proyect-2 {
+   
+    height: 313px;
+    width: 49%;
+    display: inline-block;
+    background-color: #e9e4e4;
+}
+.proyect-2:hover{
+    background-color: black;
+    color:white;
+    transform: scale(1.3);
+}
+.proyect-3 {
+  
+    height: 313px;
+    width: 49%;
+    display: inline-block;
+    background-color: #e9e4e4;
+}
+.proyect-3:hover{
+    background-color: black;
+    color:white;
+    transform: scale(1.3);
+}
+.proyect-4 {
+    color:white;
+    height: 313px;
+    width: 49%;
+    display: inline-block;
+    background-color: black;
+}
+.proyect-4:hover{
+    background-color: #e9e4e4;
+    color:black;
+    transform: scale(1.3);
+}
+.proyect-title {
+    margin-top: 275px;
+    width: 50%;
+    height: 626px;
+    background-color: #e9e4e4;
+    display: inline-block;
+}
+
+.container-2 {
+    margin-top: 0px;
+    width: 100%;
+}
+
+/******EXPERIENCIA*******/
+.exp-title {
+       border-radius:.25em;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    text-align: center;
+    margin-top: 10%;
+    font-size: 35px;
+    background-color: #e9e4e4;
+}
+
+.exp {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: white;
+}
+
+.exp1 {
+    border-bottom: 1px solid grey;
+}
+/***************FORMACION ACADEMICA*************/
+.form {
+    margin-bottom:10%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: white;
+}
+
+.form-title {
+       border-radius:.25em;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    text-align: center;
+    margin-top: 10%;
+    font-size: 35px;
+    background-color: #e9e4e4;
+}
+
+.form1 {
+    border-bottom: 1px solid grey;
+}
+
+/***FOOTER********/
+footer {
+    border-right: 10px;
+    opacity: 0.8;
+    padding-top: 100px;
+    text-align: center;
+    background-color: rgba(0,0,0, 0.5);
+    height: 150px;
+}
+
+footer i:hover{
+      transform: scale(1.3);
+
+}
+/************PRUEBA****************/
+.flecha {
+    
+    position: fixed;
+    top: 600px;
+    right: 20px;
+}
+.flecha2 {
+    
+    position: fixed;
+    top: 500px;
+    right: 20px;
+}
+
+/****************VER MAS***************/
+
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Mostrar mas';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Mostrar menos';
+}
+
+.read-more-trigger {
+  margin-top:10px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: black;
+  font-size: .9em;
+  line-height: 2;
+  border: 2px solid #ddd;
+  border-radius: .25em;
+}
+
+
+
+
+

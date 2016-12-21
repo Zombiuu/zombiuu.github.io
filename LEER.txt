@@ -1,0 +1,1 @@
+Tanto el archivo index2.html como Style2.css seran futuras implementacion como portada. Funcionan de forma correcta pero aun no serian parte de la WEB.
