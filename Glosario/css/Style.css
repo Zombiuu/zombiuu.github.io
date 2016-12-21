@@ -1,0 +1,233 @@
+﻿body{
+    font-family:'Agency FB';
+    margin: 0;
+    background-color:white;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+
+}
+
+
+.imagenTitulo {
+    height:100%;
+    width:40%;
+    margin-left:30%;
+    margin-right:30%;
+}
+
+.formatoTitulo{
+    left:50%;
+}
+.tamImagen{
+    margin: auto;
+    height: 315px;
+    width: 560px;
+}
+.estiloVideos {
+ 
+    width:560px; 
+    height:315px;
+    border:0;
+}
+p {
+    text-align: justify;
+    width: 560px;
+}
+article {
+   
+    border:solid;
+    padding: 10px 85px;
+    background-color:  white;
+    height: auto;
+    width: auto;
+    margin:auto;
+    margin-top: 10px;
+}
+
+
+.parteSuperior {
+
+    background-color: black;
+    height: 400px;
+    width: 100%;
+
+
+ }
+
+.parteMedia {
+    margin-left:30%;
+    margin-right:30%;
+    width:40%;
+}
+
+section{
+    margin:auto;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+aside{
+    border:solid;
+    right:50px;
+    top: 450px;
+    display: inline-block;
+    position:absolute;
+    position:fixed;
+    margin: auto;
+}
+.tamAside {
+    width: 500px;
+    height: 300px;
+}
+
+footer {
+    bottom:2px;
+    color: white;
+    background-color: black;
+    line-height: 3;
+    text-align:center;
+    width:100%;
+    height: 200px;
+}
+
+.btnFooter{
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 15px 25px;
+    display: inline-block;
+    margin: 15px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border: 3px solid #fff;
+    color:   white;
+ 
+}
+
+.btnFooter:hover{
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, white), color-stop(1, white));
+	background:-moz-linear-gradient(top, black 5%, white 100%);
+	background:-webkit-linear-gradient(top, black 5%, white 100%);
+	background:-o-linear-gradient(top,white 5%, black 100%);
+	background:linear-gradient(to bottom, black 5%, white 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='white',GradientType=0);
+	background-color:white;
+}
+
+
+.btnInicio{
+ 
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 1% 6%;
+    display: inline-block;
+    margin: 2% 32%;
+    letter-spacing: 2px;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border: 3px solid black;
+    color: black;
+}
+
+.btnInicio:hover{
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+	background-color:black;
+}
+
+.btnMenu{
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 50px;
+    display: inline-block;
+    margin: 15px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border: 3px solid #fff;
+    color:   white;
+}
+
+.btnMenu:hover{
+
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+	background-color:#dfdfdf;
+
+
+}
+
+
+/*******************extra***************/
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Mostrar vídeo';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Ocultar vídeo';
+}
+
+.read-more-trigger {
+    text-align:center;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+ 
+
+
+ 
+ 
+}
