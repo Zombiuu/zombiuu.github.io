@@ -5,7 +5,7 @@
 }
 
 body {
-    font-size: 30px;
+    font-size: 36px;
  
     font-family:'Open Sans', sans-serif;
 }
@@ -23,7 +23,7 @@ input, label {
     input[type=radio] {
         border: 0px;
         width: 60px;
-        height: 3em;
+        height: 7em;
     }
 
 
@@ -46,6 +46,10 @@ input, label {
         border:2px solid black;
     }
     input{
-        margin-top:6px;
+        margin-top:10px;
+    } 
+  label{
+      margin-left:10px;
+        margin-top:40px;
     }
 /*#b32a31*/
