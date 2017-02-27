@@ -1,0 +1,44 @@
+﻿{
+  "Actividades": [
+    {
+      "Titulo": "Glosario",
+      "Fecha": "23/01/2017",
+      "Descripcion": "Página realizada para la asignatura de Lenguaje de Marcas",
+      "Link":"Glosario/",
+      "Miembros": "Ramsés Diez",
+      "Asignaturas": "Lenguaje de marcas",
+      "Disponible": "si",
+      "Destacado": "no",
+      "Responsive": "no",
+      "Visualizacion": "Resolución",
+      "Foto": "img/img2.png"
+    },
+    {
+      "Titulo": "Grupal",
+      "Fecha": "23/01/2017",
+      "Descripcion": "Página realizada para la asignatura de Lenguaje de Marcas",
+      "Link": "Grupal/",
+      "Miembros": "Sergio, Guillermo, Ramsés",
+      "Asignaturas": "Lenguaje de marcas",
+      "Disponible": "si",
+      "Destacado": "si",
+      "Responsive": "no",
+      "Visualizacion": "No lo entiendo",
+      "Foto": "img/img1.png"
+    },
+    {
+      "Titulo": "Curriculum",
+      "Fecha": "23/01/2017",
+      "Descripcion": "Página realizada para la asignatura de Lenguaje de Marcas",
+      "Link": "CV/",
+      "Miembros": "¿En caso de no ser en grupo seria en blanco?",
+      "Asignaturas": "Lenguaje de marcas",
+      "Disponible": "si",
+      "Destacado": "no",
+      "Responsive": "no",
+      "Visualizacion": "No lo entiendo",
+      "Foto": "img/img0.png"
+    }
+
+  ]
+}
