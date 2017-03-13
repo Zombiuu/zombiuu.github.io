@@ -5,12 +5,17 @@
       "Fecha": "23/01/2017",
       "Descripcion": "Página realizada para la asignatura de Lenguaje de Marcas",
       "Link": "Glosario/",
-      "Grupal": "Ramsés Diez",
+      "Grupal": [
+        {
+          "Nombre": "Ramsés",
+          "Url": "https://zombiuu.github.io/"
+        }
+      ],
       "Asignaturas": "Lenguaje de marcas",
-      "Disponible": "si",
+      "Disponible": true,
       "Destacado": false,
-      "Responsive": "no",
-      "Visualizacion": "Resolución",
+      "Responsive": "No",
+      "Visualizacion": "1920x1080",
       "Foto": "img/img2.png"
     },
     {
@@ -21,19 +26,19 @@
       "Grupal": [
         {
           "Nombre": "Sergio",
-          "URL": "https://sergioarranz.github.io/"
+          "Url": "https://sergioarranz.github.io/"
         },
         {
           "Nombre": "Guillermo",
-          "URL": "https://shotual.github.io/"
+          "Url": "https://shotual.github.io/"
         }
 
       ],
       "Asignaturas": "Lenguaje de marcas",
-      "Disponible": "si",
-     "Destacado": true,
-      "Responsive": "no",
-      "Visualizacion": "No lo entiendo",
+      "Disponible": true,
+      "Destacado": true,
+      "Responsive": "No",
+      "Visualizacion": "1920x1080",
       "Foto": "img/img1.png"
     },
     {
@@ -41,12 +46,17 @@
       "Fecha": "23/01/2017",
       "Descripcion": "Página realizada para la asignatura de Lenguaje de Marcas",
       "Link": "CV/",
-      "Grupal": "Ramsés Diez",
+      "Grupal": [
+        {
+          "Nombre": "Ramsés",
+          "Url": "https://zombiuu.github.io/"
+        }
+      ],
       "Asignaturas": "Lenguaje de marcas",
-      "Disponible": "si",
+      "Disponible": true,
       "Destacado": true,
-      "Responsive": "no",
-      "Visualizacion": "No lo entiendo",
+      "Responsive": "No",
+        "Visualizacion": "1920x1080",
       "Foto": "img/img0.png"
     }
 
