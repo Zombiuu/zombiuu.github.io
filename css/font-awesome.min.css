@@ -2926,11 +2926,4 @@
     overflow: visible;
     clip: auto;
 }
-#destacado{
-    position:relative;
-    top:-300px;
-    left:80px;
-    color:#60eda3;
-    transform: scale(3);
-   
-}
+

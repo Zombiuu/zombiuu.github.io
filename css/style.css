@@ -1,0 +1,15 @@
+.destacado{
+    position:relative;
+    top:-400px;
+    left:80px;
+    color:#60eda3;
+    transform: scale(3);
+   
+}
+
+.lista{
+    list-style:none;
+}
+.noDisp{
+    display:none;
+}
