@@ -1,10 +1,10 @@
 ﻿{
   "Actividades": [
-    {
-      "Titulo": "Glosario",
-      "Fecha": "23/01/2017",
-      "Descripcion": "Página realizada para la asignatura de Lenguaje de Marcas",
-      "Link": "Glosario/",
+  {
+      "Titulo": "Flex-Box",
+      "Fecha": "15/03/2017",
+      "Descripcion": "Practica realizada con Flex-Box",
+      "Link": "Flex/",
       "Grupal": [
         {
           "Nombre": "Ramsés",
@@ -13,15 +13,16 @@
       ],
       "Asignaturas": "Lenguaje de marcas",
       "Disponible": true,
-      "Destacado": false,
-      "Responsive": "No",
-      "Visualizacion": "1920x1080",
-      "Foto": "img/img2.png"
+      "Destacado": true,
+      "Responsive": "Yes",
+      "Visualizacion": "Responsive",
+      "Foto": "img/img4.png"
     },
+   
     {
       "Titulo": "Grupal",
       "Fecha": "23/01/2017",
-      "Descripcion": "Página realizada para la asignatura de Lenguaje de Marcas",
+      "Descripcion": "Página trabajo grupal para un centro de alto rendimiento",
       "Link": "Grupal/",
       "Grupal": [
         {
@@ -44,7 +45,7 @@
     {
       "Titulo": "Curriculum",
       "Fecha": "23/01/2017",
-      "Descripcion": "Página realizada para la asignatura de Lenguaje de Marcas",
+      "Descripcion": "Practica Curriculum sencillo, idea basicas de maquetación",
       "Link": "CV/",
       "Grupal": [
         {
@@ -54,11 +55,30 @@
       ],
       "Asignaturas": "Lenguaje de marcas",
       "Disponible": true,
-      "Destacado": true,
+      "Destacado": false,
       "Responsive": "No",
         "Visualizacion": "1920x1080",
       "Foto": "img/img0.png"
+    }, 
+	 {
+      "Titulo": "Glosario",
+      "Fecha": "23/01/2017",
+      "Descripcion": "Primera página realizada en el curso, Glosario simple",
+      "Link": "Glosario/",
+      "Grupal": [
+        {
+          "Nombre": "Ramsés",
+          "Url": "https://zombiuu.github.io/"
+        }
+      ],
+      "Asignaturas": "Lenguaje de marcas",
+      "Disponible": true,
+      "Destacado": false,
+      "Responsive": "No",
+      "Visualizacion": "1920x1080",
+      "Foto": "img/img2.png"
     }
+
 
   ]
 }
