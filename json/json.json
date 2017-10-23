@@ -77,6 +77,24 @@
       "Responsive": "No",
       "Visualizacion": "1920x1080",
       "Foto": "img/img2.png"
+    },
+	  {
+      "Titulo": "Quiz",
+      "Fecha": "23/10/2017",
+      "Descripcion": "Juego realizado con canvas",
+      "Link": "dist/",
+      "Grupal": [
+        {
+          "Nombre": "Ramsés",
+          "Url": "https://zombiuu.github.io/"
+        }
+      ],
+      "Asignaturas": "Interfaces",
+      "Disponible": true,
+      "Destacado": true,
+      "Responsive": "No",
+      "Visualizacion": "1920x1080",
+      "Foto": "img/img2.png"
     }
 
 
