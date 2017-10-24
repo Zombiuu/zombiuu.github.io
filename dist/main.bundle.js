@@ -128,11 +128,13 @@ AppModule = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Actividad1; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__ = __webpack_require__("../../../../../src/app/milib/dataholder/dataholder.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__milib_views_imgs_imagen__ = __webpack_require__("../../../../../src/app/milib/views/imgs/imagen.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__milib_views_labels_label__ = __webpack_require__("../../../../../src/app/milib/views/labels/label.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__milib_views_buttons_button__ = __webpack_require__("../../../../../src/app/milib/views/buttons/button.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__milib_views_windows_window__ = __webpack_require__("../../../../../src/app/milib/views/windows/window.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__milib_events_eventsadmin__ = __webpack_require__("../../../../../src/app/milib/events/eventsadmin.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__ = __webpack_require__("../../../../../src/app/milib/dataholder/dataholder.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__milib_views_imgs_imagen__ = __webpack_require__("../../../../../src/app/milib/views/imgs/imagen.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__milib_views_labels_label__ = __webpack_require__("../../../../../src/app/milib/views/labels/label.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__milib_views_buttons_button__ = __webpack_require__("../../../../../src/app/milib/views/buttons/button.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__milib_views_windows_window__ = __webpack_require__("../../../../../src/app/milib/views/windows/window.ts");
+
 
 
 
@@ -141,11 +143,12 @@ AppModule = __decorate([
 var Actividad1 = (function () {
     function Actividad1(vMotor) {
         this.motor = vMotor;
-        this.imagenFondo = new __WEBPACK_IMPORTED_MODULE_1__milib_views_imgs_imagen__["a" /* Imagen */](this.motor, 0, 0, __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth, __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight);
+        this.imagenFondo = new __WEBPACK_IMPORTED_MODULE_2__milib_views_imgs_imagen__["a" /* Imagen */](this.motor, 0, 0, __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth, __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight);
         this.imagenFondo.setImg('./assets/img/fondo.png');
         this.motor.setRaiz(this.imagenFondo);
         this.crearEscenarioMenu();
         this.crearEscenarioJuego();
+        __WEBPACK_IMPORTED_MODULE_0__milib_events_eventsadmin__["a" /* EventsAdmin */].instance.addListener(this);
         // this.crearEscenarioVictoria();
     }
     /**
@@ -153,61 +156,61 @@ var Actividad1 = (function () {
      * DE SALIR EN LA ESQUINA COMO SALE EN EL LA PAGINA WEB. HABRA QUE QUITAR EL PANEL Y USAR WINDOW
      */
     Actividad1.prototype.crearEscenarioMenu = function () {
-        var pmw = __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth * 0.6;
-        var pmh = __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight * 0.6;
-        var pmx = __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth2 - (pmw >> 1);
-        var pmy = __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight2 - (pmh >> 1);
+        var pmw = __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth * 0.6;
+        var pmh = __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight * 0.6;
+        var pmx = __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth2 - (pmw >> 1);
+        var pmy = __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight2 - (pmh >> 1);
         // Menu central
-        this.imgCentral = new __WEBPACK_IMPORTED_MODULE_1__milib_views_imgs_imagen__["a" /* Imagen */](this.motor, pmx, pmy, pmw, pmh);
+        this.imgCentral = new __WEBPACK_IMPORTED_MODULE_2__milib_views_imgs_imagen__["a" /* Imagen */](this.motor, pmx, pmy, pmw, pmh);
         //this.imgCentral.setImg('./assets/img/imgCentral.png');
         this.motor.addViewToParentView(this.imagenFondo, this.imgCentral);
         /*Botones al menu central*/
         //Boton inicio
-        this.btnInicio = new __WEBPACK_IMPORTED_MODULE_3__milib_views_buttons_button__["a" /* Button */](this.motor, this.imgCentral.w / 3, this.imgCentral.h / 12, this.imgCentral.w / 3, this.imgCentral.h / 4);
+        this.btnInicio = new __WEBPACK_IMPORTED_MODULE_4__milib_views_buttons_button__["a" /* Button */](this.motor, this.imgCentral.w / 3, this.imgCentral.h * 0.25, this.imgCentral.w / 3, this.imgCentral.h / 4);
         this.btnInicio.setTexto("");
         this.btnInicio.setImagePath('./assets/img/btnInicio.png');
         this.motor.addViewToParentView(this.imgCentral, this.btnInicio);
         this.btnInicio.setListener(this);
         //Boton back
-        this.btnContinuar = new __WEBPACK_IMPORTED_MODULE_3__milib_views_buttons_button__["a" /* Button */](this.motor, this.imgCentral.w / 3, this.imgCentral.h / 1.8, this.imgCentral.w / 3, this.imgCentral.h / 4);
+        this.btnContinuar = new __WEBPACK_IMPORTED_MODULE_4__milib_views_buttons_button__["a" /* Button */](this.motor, this.imgCentral.w / 3, this.imgCentral.h * 0.5, this.imgCentral.w / 3, this.imgCentral.h / 4);
         this.btnContinuar.setTexto("");
         this.btnContinuar.setImagePath('./assets/img/btnContinuar.png');
         this.motor.addViewToParentView(this.imgCentral, this.btnContinuar);
         this.btnContinuar.setListener(this);
         //Boton salir
-        this.btnSalir = new __WEBPACK_IMPORTED_MODULE_3__milib_views_buttons_button__["a" /* Button */](this.motor, this.imgCentral.w / 3, this.imgCentral.h / 1, this.imgCentral.w / 3, this.imgCentral.h / 4);
+        this.btnSalir = new __WEBPACK_IMPORTED_MODULE_4__milib_views_buttons_button__["a" /* Button */](this.motor, this.imgCentral.w / 3, this.imgCentral.h * 0.75, this.imgCentral.w / 3, this.imgCentral.h / 4);
         this.btnSalir.setTexto("");
         this.btnSalir.setImagePath('./assets/img/btnSalir.png');
         this.motor.addViewToParentView(this.imgCentral, this.btnSalir);
         this.btnSalir.setListener(this);
     };
     Actividad1.prototype.crearEscenarioJuego = function () {
-        this.ventanaUno = new __WEBPACK_IMPORTED_MODULE_4__milib_views_windows_window__["a" /* Window */](this.motor, 0, 0, __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth, __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight);
-        this.ventanaUno.getBtn().setListener(this);
+        this.ventanaUno = new __WEBPACK_IMPORTED_MODULE_5__milib_views_windows_window__["a" /* Window */](this.motor, 0, 0, __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth, __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight);
+        this.ventanaUno.getBtnExit().setListener(this);
         this.ventanaUno.getImagenBack().setImg("./assets/img/fondoPregunta.png");
-        this.ventanaUno.getBtn().setImagePath("./assets/img/btnSalir2.png");
+        this.ventanaUno.getBtnExit().setImagePath("./assets/img/btnSalir2.png");
         this.motor.addViewToParentView(this.imagenFondo, this.ventanaUno);
         //Label pregunta
-        this.lblPregunta = new __WEBPACK_IMPORTED_MODULE_2__milib_views_labels_label__["a" /* Label */](this.motor, 0, 0, this.ventanaUno.w, this.ventanaUno.h / 2);
+        this.lblPregunta = new __WEBPACK_IMPORTED_MODULE_3__milib_views_labels_label__["a" /* Label */](this.motor, 0, 0, this.ventanaUno.w, this.ventanaUno.h / 2);
         this.lblPregunta.setFontStyle("20px Minecraft");
         this.motor.addViewToParentView(this.ventanaUno, this.lblPregunta);
         //Boton primera respuesta
-        this.btnRespUno = new __WEBPACK_IMPORTED_MODULE_3__milib_views_buttons_button__["a" /* Button */](this.motor, 0, this.ventanaUno.h / 2, this.ventanaUno.w / 2, this.ventanaUno.h / 4);
+        this.btnRespUno = new __WEBPACK_IMPORTED_MODULE_4__milib_views_buttons_button__["a" /* Button */](this.motor, 0, this.ventanaUno.h / 2, this.ventanaUno.w / 2, this.ventanaUno.h / 4);
         this.btnRespUno.setImagePath('./assets/img/fondoRespuesta.png');
         this.motor.addViewToParentView(this.ventanaUno, this.btnRespUno);
         this.btnRespUno.setListener(this);
         //Boton segunda respuesta
-        this.btnRespDos = new __WEBPACK_IMPORTED_MODULE_3__milib_views_buttons_button__["a" /* Button */](this.motor, this.ventanaUno.w / 2, this.ventanaUno.h / 2, this.ventanaUno.w / 2, this.ventanaUno.h / 4);
+        this.btnRespDos = new __WEBPACK_IMPORTED_MODULE_4__milib_views_buttons_button__["a" /* Button */](this.motor, this.ventanaUno.w / 2, this.ventanaUno.h / 2, this.ventanaUno.w / 2, this.ventanaUno.h / 4);
         this.btnRespDos.setImagePath('./assets/img/fondoRespuesta.png');
         this.motor.addViewToParentView(this.ventanaUno, this.btnRespDos);
         this.btnRespDos.setListener(this);
         //Boton tercera respuesta
-        this.btnRespTres = new __WEBPACK_IMPORTED_MODULE_3__milib_views_buttons_button__["a" /* Button */](this.motor, 0, this.ventanaUno.h * 0.75, this.ventanaUno.w / 2, this.ventanaUno.h / 4);
+        this.btnRespTres = new __WEBPACK_IMPORTED_MODULE_4__milib_views_buttons_button__["a" /* Button */](this.motor, 0, this.ventanaUno.h * 0.75, this.ventanaUno.w / 2, this.ventanaUno.h / 4);
         this.btnRespTres.setImagePath('./assets/img/fondoRespuesta.png');
         this.motor.addViewToParentView(this.ventanaUno, this.btnRespTres);
         this.btnRespTres.setListener(this);
         //Boton cuarta respuesta
-        this.btnRespCuatro = new __WEBPACK_IMPORTED_MODULE_3__milib_views_buttons_button__["a" /* Button */](this.motor, this.ventanaUno.w / 2, this.ventanaUno.h * 0.75, this.ventanaUno.w / 2, this.ventanaUno.h / 4);
+        this.btnRespCuatro = new __WEBPACK_IMPORTED_MODULE_4__milib_views_buttons_button__["a" /* Button */](this.motor, this.ventanaUno.w / 2, this.ventanaUno.h * 0.75, this.ventanaUno.w / 2, this.ventanaUno.h / 4);
         this.btnRespCuatro.setImagePath('./assets/img/fondoRespuesta.png');
         this.motor.addViewToParentView(this.ventanaUno, this.btnRespCuatro);
         this.btnRespCuatro.setListener(this);
@@ -216,10 +219,10 @@ var Actividad1 = (function () {
         this.arrRespCorrecta = ["‘ET, el extraterrestre’", "60 minutos", "‘Balloon Fight’"];
     };
     Actividad1.prototype.crearEscenarioVictoria = function () {
-        this.ventanaVictoria = new __WEBPACK_IMPORTED_MODULE_1__milib_views_imgs_imagen__["a" /* Imagen */](this.motor, 0, 0, __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth, __WEBPACK_IMPORTED_MODULE_0__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight);
+        this.ventanaVictoria = new __WEBPACK_IMPORTED_MODULE_2__milib_views_imgs_imagen__["a" /* Imagen */](this.motor, 0, 0, __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth, __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight);
         this.ventanaVictoria.setImg("./assets/img/fondoVictoria.png");
         this.motor.addViewToParentView(this.imagenFondo, this.ventanaVictoria);
-        this.btnReset = new __WEBPACK_IMPORTED_MODULE_3__milib_views_buttons_button__["a" /* Button */](this.motor, this.ventanaUno.w / 3, this.ventanaUno.h / 1.3, this.ventanaUno.w / 4, this.ventanaUno.h / 8);
+        this.btnReset = new __WEBPACK_IMPORTED_MODULE_4__milib_views_buttons_button__["a" /* Button */](this.motor, this.ventanaUno.w / 3, this.ventanaUno.h / 1.3, this.ventanaUno.w / 4, this.ventanaUno.h / 8);
         this.btnReset.setImagePath("./assets/img/btnReset.png");
         this.btnReset.setListener(this);
         this.motor.addViewToParentView(this.ventanaVictoria, this.btnReset);
@@ -227,6 +230,43 @@ var Actividad1 = (function () {
     };
     Actividad1.prototype.screenSizeChanged = function (vWidth, vHeight) {
         console.log("SE HA ACTUALIZADO EL TEMAÑO DE LA PANTALLA");
+        var pmw = __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth * 0.6;
+        var pmh = __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight * 0.6;
+        var pmx = __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth2 - (pmw >> 1);
+        var pmy = __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight2 - (pmh >> 1);
+        //Imagen padre
+        this.imagenFondo.setSize(__WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth, __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight);
+        //Imagen del fondo del menu
+        this.imgCentral.setSize(pmw, pmh);
+        this.imgCentral.setPosition(__WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth2 - (pmw >> 1), __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight2 - (pmh >> 1));
+        //Botones menu
+        this.btnInicio.setSize(this.imgCentral.w / 3, this.imgCentral.h / 4);
+        this.btnInicio.setPosition(this.imgCentral.w / 3, this.imgCentral.h * 0.25);
+        this.btnContinuar.setSize(this.imgCentral.w / 3, this.imgCentral.h / 4);
+        this.btnContinuar.setPosition(this.imgCentral.w / 3, this.imgCentral.h * 0.5);
+        this.btnSalir.setSize(this.imgCentral.w / 3, this.imgCentral.h / 4);
+        this.btnSalir.setPosition(this.imgCentral.w / 3, this.imgCentral.h * 0.75);
+        //Ventana juego
+        this.ventanaUno.setSize(__WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth, __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight);
+        this.ventanaUno.getImagenBack().setSize(__WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth, __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight);
+        this.ventanaUno.getBtnExit().setSize(this.imgCentral.w / 3, this.imgCentral.h / 4);
+        this.ventanaUno.getBtnExit().setPosition(__WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth - (this.imgCentral.w / 3), 0);
+        //Label pregunta
+        this.lblPregunta.setSize(this.ventanaUno.w, this.ventanaUno.h / 2);
+        this.lblPregunta.setPosition(0, 0);
+        //Botones respuestas
+        this.btnRespUno.setSize(this.ventanaUno.w / 2, this.ventanaUno.h / 4);
+        this.btnRespUno.setPosition(0, this.ventanaUno.h / 2);
+        this.btnRespDos.setSize(this.ventanaUno.w / 2, this.ventanaUno.h / 4);
+        this.btnRespDos.setPosition(this.ventanaUno.w / 2, this.ventanaUno.h / 2);
+        this.btnRespTres.setSize(this.ventanaUno.w / 2, this.ventanaUno.h / 4);
+        this.btnRespTres.setPosition(0, this.ventanaUno.h * 0.75);
+        this.btnRespCuatro.setSize(this.ventanaUno.w / 2, this.ventanaUno.h / 4);
+        this.btnRespCuatro.setPosition(this.ventanaUno.w / 2, this.ventanaUno.h * 0.75);
+        //Ventana ¡VICTORIA!
+        this.ventanaVictoria.setSize(__WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenWidth, __WEBPACK_IMPORTED_MODULE_1__milib_dataholder_dataholder__["a" /* DataHolder */].instance.nScreenHeight);
+        this.btnReset.setSize(this.ventanaUno.w / 4, this.ventanaUno.h / 8);
+        this.btnReset.setPosition(this.ventanaUno.w / 3, this.ventanaUno.h / 1.3);
     };
     Actividad1.prototype.buttonListenerOnClick = function (btn) {
         if (this.btnInicio == btn) {
@@ -235,7 +275,7 @@ var Actividad1 = (function () {
             this.motor.setViewVisibility(this.ventanaUno.uid, true);
             this.pintarPregunta();
         }
-        else if (this.ventanaUno.getBtn() == btn) {
+        else if (this.ventanaUno.getBtnExit() == btn) {
             this.motor.setViewVisibility(this.ventanaUno.uid, false);
             this.motor.setViewVisibility(this.imgCentral.uid, true);
         }
@@ -266,7 +306,8 @@ var Actividad1 = (function () {
         }
     };
     /**
-     * pintarPregunta metodo que pinta el lbl de la pregunta y sus cuatro botones
+     * pintarPregunta metodo que pinta el lbl de la pregunta y sus cuatro botones utilizando
+     * el metodo random para pintar los botones de manera aleatoria.
      */
     Actividad1.prototype.pintarPregunta = function () {
         this.arrBoolean = [false, false, false, false];
@@ -277,7 +318,8 @@ var Actividad1 = (function () {
         this.btnRespCuatro.setTexto(this.arrRespuestas[this.indice][this.random()]);
     };
     /**
-     * comprobacionVictoria metodo que comprueba si es la ultima pregunta y es correcta para pasar a la pantalla victoria
+     * comprobacionVictoria metodo que comprueba si es la ultima pregunta y es correcta para pasar
+     * a la pantalla victoria
      */
     Actividad1.prototype.comprobacionVictoria = function () {
         if (this.indice == this.arrRespCorrecta.length) {
@@ -289,7 +331,7 @@ var Actividad1 = (function () {
         }
     };
     /**
-     * random metodo que da un numero aleatorio de 0 a 3
+     * random metodo que da un numero aleatorio de 0 a 3.
      */
     Actividad1.prototype.random = function () {
         var hola = false;
@@ -828,6 +870,11 @@ var Button = (function (_super) {
     Button.prototype.getLblTexto = function () {
         return this.lblTexto;
     };
+    Button.prototype.setSize = function (vWidth, vHeight) {
+        _super.prototype.setSize.call(this, vWidth, vHeight);
+        this.imgBack.setSize(vWidth, vHeight);
+        this.lblTexto.setSize(vWidth, vHeight);
+    };
     return Button;
 }(__WEBPACK_IMPORTED_MODULE_0__view__["a" /* View */]));
 
@@ -1013,6 +1060,10 @@ var Label = (function (_super) {
     Label.prototype.getTexto = function () {
         return this.sTexto;
     };
+    Label.prototype.setSize = function (vWidth, vHeight) {
+        _super.prototype.setSize.call(this, vWidth, vHeight);
+        this.setTextAttrs(this.sAlign, this.sBaseLine);
+    };
     return Label;
 }(__WEBPACK_IMPORTED_MODULE_0__view__["a" /* View */]));
 
@@ -1079,6 +1130,10 @@ var View = (function () {
         this.w = vWidth;
         this.h = vHeight;
     };
+    View.prototype.setPosition = function (vX, vY) {
+        this.x = vX;
+        this.y = vY;
+    };
     /**
      * Metodo que revisa si el pixel en la posicion X e Y (px y py) se encuentran dentro del view. Metodo usado para detectar
      * si se pincho con el raton encima del View.
@@ -1144,7 +1199,7 @@ var Window = (function (_super) {
     }
     Window.prototype.paint = function (vctx) {
     };
-    Window.prototype.getBtn = function () {
+    Window.prototype.getBtnExit = function () {
         return this.btnExit;
     };
     Window.prototype.getImagenBack = function () {
